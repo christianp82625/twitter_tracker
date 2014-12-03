@@ -1,0 +1,60 @@
+<div class="title">
+	<h2 class="tab">
+		<% if (editType === 'edit') { %>Edit Alert Rule: <%= data.ruleName.value %><% } %>
+		<% if (editType === 'add') { %>Add New Alert Rule<% } %>
+	</h2>
+</div>
+<div class="list-wrapper">
+	<form class="form-horizontal alert-rule-edit <%= editType %>-form">
+		<div class="control-group">
+			<label class="control-label" for="ruleName">Rule Name</label>
+			<div class="controls">
+				<input id="ruleName" name="ruleName" value="<%= data.ruleName.value || '' %>" placeholder="<%=data.ruleName.placeholder || '' %>"  <%= data.flag.value %> />
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="twitterUsername">Twitter Username</label>
+			<div class="controls">
+				<input id="twitterUsername" name="twitterUsername" value="<%= data.twitterUsername.value || '' %>" placeholder="<%=data.twitterUsername.placeholder || '' %>" />
+			</div>
+		</div>	
+		<div class="control-group">
+			<label class="control-label" for="email">Email</label>
+			<div class="controls">
+				<input id="email" name="email" value="<%= data.email.value || '' %>" placeholder="<%=data.email.placeholder || '' %>" />
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="mobile">Mobile</label>
+			<div class="controls">
+				<input id="mobile" name="mobile" value="<%= data.mobile.value || '' %>" placeholder="<%=data.mobile.placeholder || '' %>" />
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="keyword">Keyword</label>
+			<div class="controls">
+				<select id="keyword" name="keyword" data-placeholder="Choose a keyword..." class="chosen-select" >
+					<option></option>
+				</select>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="sentiment">Sentiment</label>
+			<div class="controls">
+				<select id="sentiment" name="sentiment" data-placeholder="Choose a sentiment..." >				
+				</select>
+			</div>
+		</div>
+
+		<div class="form-actions">
+			<% if (editType === 'add') { %>
+				<button class='btn btn-primary' type='submit' id='save' >Add Alert Rule</button>
+			<% }
+			else if (editType === 'edit') { %>
+				<button class='btn btn-primary' type='submit' id='save' >Save Changes</button>
+				<button class='btn btn-danger' id='delete' >Delete Alert Rule</button>
+			<% } %>	 
+			<button class='btn' type="reset" id='cancel' >Cancel</button>
+		</div>
+	</form>
+</div>

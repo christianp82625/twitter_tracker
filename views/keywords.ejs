@@ -1,0 +1,80 @@
+  <% scripts.push('/js/maindashboard.js') %>
+  
+  <div style="position:fixed; bottom: 50px; right: 50px; display:none;" id="lazy-loader">
+	<img src="/img/loader.gif" />
+  </div>
+  <input type="hidden" id="keyword_client_data" value="" name="keyword_client_data" />
+  <div class="container">
+    <div class="row"> 
+      
+      <!----------tweets------------>
+      <div class="span3">
+        <div class="content">
+          <div class="title">
+            <h2>KEYWORDS</h2>
+          </div>
+
+	  <div id="content_1" class="tag-cloud influence-scroll-block list-wrapper">
+            <ul class="list tags tags-keyword" id="keyword-dashboard-list"></ul>
+          </div>
+        </div>
+      </div>
+      
+      <!----------tweets Cloud------------>
+      <div class="span3">
+        <div class="content">
+          <div class="title">
+            <h2>TWEETS</h2>
+          </div>
+          <div id="content_1" class="tweet-scroll-block tweet">
+            <ul id="tweet-scroll-widget">
+
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!----------tweet cloud------------>
+      
+      <div class="span6">
+        <div class="content">
+          <div class="title">
+            <h2>TWEETS CLOUD</h2>
+          </div>
+          <div class="flashpic">
+	  
+		<div>
+		    <div style="float:left">
+			<noscript>
+			    <object id='flexApp' classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000'
+				    codebase='http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,5,0,0'
+				    width='700' height='500' >
+				<param name='flashvars' value='bridgeName=example'/>
+				<param name='src' value='/img/TwitterFeed.swf'/>
+				<param name='wmode' value='transparent'/>
+				<embed name='flexApp' pluginspage='http://www.macromedia.com/go/getflashplayer' src='/img/TwitterFeed.swf'
+				       width='700' height='500'  flashvars='bridgeName=example'/>
+			    </object>
+			</noscript>
+
+			<script language='javascript' charset='utf-8'>
+			    document.write("<object id='flexApp' classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000' codebase='http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,5,0,0' width='700' height='500' >");
+			    document.write("<param name='flashvars' value='bridgeName=example'/>");
+			    document.write("<param name='src' value='/img/TwitterFeed.swf'/>");
+			    document.write("<param name='wmode' value='transparent'/>");
+			    document.write("<embed id='flexApp' pluginspage='http://www.macromedia.com/go/getflashplayer' src='/img/TwitterFeed.swf' width='570' height='500'  flashvars='bridgeName=example'/>");
+			    document.write("</object>");
+			</script>
+
+			<br/><br/>
+		    </div>		    
+		</div>
+		
+	  </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row"> </div>
+  </div>

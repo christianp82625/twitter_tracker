@@ -1,0 +1,11 @@
+<ul class="list">
+  <% for(var i=0; i<users.length; i++) { %>
+    <li data-user-index='<%= i %>' data-user-key='<%= users[i].username.value %>'>
+      <div class="list-image"><a href="#"><img src="img/user.jpg" alt="" /></a></div>
+      <div class="list-info">
+        <h2><%= users[i].fullname.value %></h2>
+        <p><%= users[i].username.value %></p>
+      </div>
+    </li>
+  <% } %>
+</ul>

@@ -1,0 +1,121 @@
+<% scripts.push('/js/influencers-dashboard.js') %>
+  <div class="container">
+    <div class="row"> 
+      
+      <!----------Top Influencers------------>
+      
+      <div class="span3">
+        <div class="content">
+          <div class="title">
+            <h2 class="tab">TOP <span id="top-infl-count"><%= influencers.length %></span> INFLUENCERS</h2>
+          </div>
+          <div id="content_1" class="influence-scroll-block list-wrapper">
+            <select data-placeholder="Choose a keyword..." class="chosen-select keywords-select" id="keyword-sel">
+            </select>
+
+            <br/><br/>
+
+            <ul class="list" id="influencers-dashboard-list"></ul>
+          </div>
+        </div>
+      </div>
+      
+      <!----------General------------>
+      
+      <div class="span3">
+        <div class="content">
+          <div class="title">
+            <h2>GENERAL</h2>
+          </div>
+          <div class="tweet-result">
+            <ul class="li">
+              <li> Twitter Id: <span id="details_name"></span> </li>
+              <li> Location: <span id="details_location"></span> </li>
+              <li> Followers: <span id="details_followers"></span> </li>
+              <li> Following: <span id="details_following"></span> </li>
+              <li> Total Tweets: <span id="details_total_tweets"></span> </li>
+              <li> Retweets: <span id="details_retweets"></span> </li>
+              <li> Total Positive: <span id="details_positive"></span> </li>
+              <li> Total Negative: <span id="details_negative"></span> </li>
+              <li> Total Neutral: <span id="details_neutral"></span> </li>
+            </ul>
+          </div>
+          
+          <!----------Fllowers------------>
+          
+          <div class="list-border">
+            <div class="title title-inner followershead">
+              <h2>FOLLOWERS</h2>
+            </div>
+            <div  id="content_2" class="fllow-scroll-block list-wrapper">
+              <ul class="list follows-list">
+              </ul>
+            </div>
+          </div>
+          
+          <!----------Fllowing------------>
+          
+          <div class="list-border">
+            <div class="title title-inner followershead">
+              <h2>FOLLOWING</h2>
+            </div>
+            <div  id="content_3" class="fllow-scroll-block list-wrapper">
+              <ul class="list follows-list">
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!----------tweets cloud------------>
+      
+      <div class="span6">
+        <div class="content">
+          <div class="title">
+            <h2>TWEETS CLOUD</h2>
+            <% /*<div class="dropmenu pull-left">
+              <div class="btn-group">
+                <button class="btn">All keywords</button>
+                <button class="btn dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Menu 1</a></li>
+                  <li><a href="#">Menu 2</a></li>
+                  <li><a href="#">Menu 3</a></li>
+                </ul>
+              </div>
+            </div> */ %>
+          </div>
+          <div class="flashpic">
+	  <div>
+		    <div style="float:left">
+			<noscript>
+			    <object id='flexApp' classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000'
+				    codebase='http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,5,0,0'
+				    width='700' height='500' >
+				<param name='flashvars' value='bridgeName=example'/>
+				<param name='src' value='/img/TwitterFeed.swf'/>
+				<embed name='flexApp' pluginspage='http://www.macromedia.com/go/getflashplayer' src='/img/TwitterFeed.swf'
+				       width='700' height='500'  flashvars='bridgeName=example'/>
+			    </object>
+			</noscript>
+
+			<script language='javascript' charset='utf-8'>
+			    document.write("<object id='flexApp' classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000' codebase='http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,5,0,0' width='700' height='500' >");
+			    document.write("<param name='flashvars' value='bridgeName=example'/>");
+			    document.write("<param name='src' value='/img/TwitterFeed.swf'/>");
+			    document.write("<embed id='flexApp' pluginspage='http://www.macromedia.com/go/getflashplayer' src='/img/TwitterFeed.swf' width='570' height='500'  flashvars='bridgeName=example'/>");
+			    document.write("</object>");
+			</script>
+
+			<br/><br/>
+		    </div>
+		</div>
+	  </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row"> </div>
+  </div>

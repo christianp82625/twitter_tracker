@@ -1,0 +1,56 @@
+<div class="title">
+	<h2 class="tab">
+		<% if (editType === 'edit') { %>Edit User: <%= data.username.value %> <% } %>
+		<% if (editType === 'add') { %>Add New User<% } %>
+	</h2>
+</div>
+<div class="list-wrapper">
+	<form class="form-horizontal user-edit <%= editType %>-form">
+		<div class="control-group">
+			<label class="control-label" for="username">Username</label>
+			<div class="controls">
+				<input id="username" name="username" value="<%= data.username.value || '' %>" placeholder="<%=data.username.placeholder || '' %>" <% if (editType === 'edit') { %>disabled<% } %> />
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="fullname">Full Name</label>
+			<div class="controls">
+				<input id="fullname" name="fullname" value="<%= data.fullname.value || '' %>" placeholder="<%=data.fullname.placeholder || '' %>" />
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="email">Email</label>
+			<div class="controls">
+				<input id="email" name="email" value="<%= data.email.value || '' %>" placeholder="<%=data.email.placeholder || '' %>" />
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="password">Password</label>
+			<div class="controls">
+				<input id="password" name="password" type='password' value="<%= data.password.value || '' %>" placeholder="<%=data.password.placeholder || '' %>" />
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="passwordConfirm">Confirm Password</label>
+			<div class="controls">
+				<input id="passwordConfirm" name="passwordConfirm" type='password' value="<%= data.password.value || '' %>" placeholder="<%=data.password.placeholder || '' %>" />
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="sendAlerts">Send Alerts?</label>
+			<div class="controls">
+				<input id="sendAlerts" name="sendAlerts" type='checkbox' checked="<%= data.sendAlerts.value || data.sendAlerts.default %>" />
+			</div>
+		</div>
+		<div class="form-actions">
+			<% if (editType === 'add') { %>
+				<button class='btn btn-primary' type='submit' id='save' >Add User</button>
+			<% }
+			else if (editType === 'edit') { %>
+				<button class='btn btn-primary' type='submit' id='save' >Save Changes</button>
+				<button class='btn btn-danger' id='delete' >Delete User</button>
+			<% } %>	 
+			<button class='btn' type="reset" id='cancel' >Cancel</button>
+		</div>
+	</form>
+</div>

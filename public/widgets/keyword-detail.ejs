@@ -1,0 +1,34 @@
+<div class="title">
+	<h2 class="tab">
+		<% if (editType === 'edit') { %>View Keyword: <%= data.keyword.value %><% } %>
+		<% if (editType === 'add') { %>Add New Keyword<% } %>
+	</h2>
+</div>
+<div class="list-wrapper">
+	<form class="form-horizontal keyword-edit <%= editType %>-form">
+		<div class="control-group">
+			<label class="control-label" for="keyword">Keyword</label>
+			<div class="controls">
+				<input id="keyword" class="input-xlarge" name="keyword" value="<%= data.keyword.value || '' %>" placeholder="<%=data.keyword.placeholder || '' %>" 
+					<% if (editType === 'edit') { %> disabled <% } %> />
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="isPhrase">Is it a phrase?</label>
+			<div class="controls">
+				<input id="isPhrase" class="input-xlarge" name="isPhrase" type='checkbox' checked="<%= data.isPhrase.value || data.isPhrase.default %>" 
+					<% if (editType === 'edit') { %> disabled <% } %> />
+			</div>
+		</div>
+		<div class="form-actions">
+			<% if (editType === 'add') { %>
+				<button class='btn btn-primary' type='submit' id='save' >Add Keyword</button>
+			<% } 
+			else if (editType === 'edit') { %>
+				<!-- <button class='btn btn-primary' type='submit' id='save' >Save Changes</button> -->
+				<button class='btn btn-danger' type='delete' id='delete' >Delete Keyword</button>
+			<% } %>	 
+			<button class='btn' type='reset' id='cancel' >Cancel</button>
+		</div>
+	</form>
+</div>

@@ -1,0 +1,51 @@
+<% scripts.push('/js/login.js') %>
+<% scripts.push('/js/crypto.js') %>
+<!-- <% styles.push('/css/login.css') %> -->
+
+<div class="container login">
+	<div class="row">
+		<div class="span6 offset3">
+        
+            <% for (type in flash) { %>
+                <ul class="<%= type %> header-<%= type %>">
+                <% var messages = flash[type];
+                for (var _i = 0, _len = messages.length; _i < _len; _i++) {
+                    var message = messages[_i]; %>
+                    <li class="<%= type %>">
+                    <div class="alert alert alert-error">  
+                      <a class="close" data-dismiss="alert">&times;</a>  
+                      <strong style="margin-right: 10px;">Error!</strong><%= message %>  
+                    </div>
+                    </li>
+                <% }%>
+                </ul>
+            <% } %>
+			<div class="content">
+				<div class="title login-head">
+					<h2 class="tab">Login</h2>
+				</div>
+				<div class="list-wrapper">
+					<form class="form-horizontal login-form" method="POST">
+						<input type="hidden" name="redir" />
+						<div class="control-group">
+							<label class="control-label" for="username">Username</label>
+							<div class="controls">
+								<input id="username" name="username" placeholder="Username" />
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="password">Password</label>
+							<div class="controls">
+								<input id="password" name="password" type='password' placeholder="Password"/>
+							</div>
+						</div>
+						<input type="hidden" name="passwordHash" />
+						<div class="form-actions">
+							<button class='btn btn-primary' type='submit' id='login' >Login</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,9 @@
+<ul class="list">
+  <% for(var i=0; i<keywords.length; i++) { %>
+    <li data-keyword-index='<%= i %>' >
+      <div class="list-info">
+        <h2><%= keywords[i].keyword.value %></h2>
+      </div>
+    </li>
+  <% } %>
+</ul>

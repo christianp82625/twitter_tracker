@@ -1,0 +1,10 @@
+<ul class="list">
+  <% for(var i=0; i<alertRules.length; i++) { %>
+    <li data-alert-rule-index='<%= i %>' data-alert-rule-key='<%= alertRules[i].key.value %>'>
+      <div class="list-image"><a href="#"><img src="img/user.jpg" alt="" /></a></div>
+      <div class="list-info">
+        <h2><%= alertRules[i].ruleName.value %></h2>
+      </div>
+    </li>
+  <% } %>
+</ul>

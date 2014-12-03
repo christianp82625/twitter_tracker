@@ -1,0 +1,11 @@
+<% influencers.forEach(function(infl) { %>
+	<% if(typeof keyword == "undefined" || keyword==infl.keyword) { %>
+		<li data-infl-id="<%= infl.key %>" data-infl-username="<%= infl.username %>">
+			<div class="list-image"><img src="<%= infl.user_profile_image_url %>" alt="" /></div>
+			<div class="list-info">
+				<h2><%= infl.name %></h2>
+				<p><%= infl.location %></p>
+			</div>
+		</li>
+	<% } %>
+<% }); %>

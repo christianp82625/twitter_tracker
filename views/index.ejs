@@ -1,0 +1,185 @@
+<% scripts.push('/js/sentimants.js') %>
+<% scripts.push('/js/highcharts.js') %>
+<% scripts.push('/js/modules/exporting.js') %>
+<% scripts.push('/js/canvasInitMap.js') %>
+<% scripts.push('/js/maindashboard.js') %>
+
+  <div class="container">
+    <div class="row"> 
+      
+      <!----------tweet 1------------>
+      
+      <div class="span3">
+        <div class="content">
+          <div class="title tweet-title">
+            <h2></h2>
+            <div class="btn-group tweet-menu">
+              <!--
+              <button class="btn"><div id="default1" class="keyword-span"></div></button>
+              <button class="btn dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span></button>
+              <ul class="dropdown-menu keywords" id="widget-dropdown-keyword-1">
+              </ul>-->
+              <select data-placeholder="Choose a keyword..." class="chosen-select keywords-select" 
+                id="widget-keyword-1">
+                
+              </select>
+
+            </div>          </div>
+          <div id="content_2" class="scroll-block tweet">
+            <ul id="content-widget-1">
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!----------tweet 2------------>
+      
+      <div class="span3">
+        <div class="content">
+          <div class="title tweet-title">
+            <h2></h2>
+            <div class="btn-group tweet-menu">
+<!--               <button class="btn"><div id="default2" class="keyword-span"></div></button>
+              <button class="btn dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span></button>
+              <ul class="dropdown-menu keywords" id="widget-dropdown-keyword-2">
+              </ul> -->
+              <select data-placeholder="Choose a keyword..." class="chosen-select keywords-select" 
+                id="widget-keyword-2">
+                
+              </select>    
+            </div>
+          </div>
+          <div id="content_1" class="scroll-block tweet">
+            <ul id="content-widget-2">
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!----------tweet 3------------>
+      
+      <div class="span3">
+        <div class="content">
+          <div class="title tweet-title">
+            <h2></h2>
+            <div class="btn-group tweet-menu">
+              <!-- <button class="btn"><div id="default3" class="keyword-span"></div></button>
+              <button class="btn dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span></button>
+              <ul class="dropdown-menu keywords" id="widget-dropdown-keyword-3">
+              </ul> -->
+              <select data-placeholder="Choose a keyword..." class="chosen-select keywords-select" 
+                id="widget-keyword-3">
+                
+              </select>              
+            </div>
+          </div>
+          <div id="content_3" class="scroll-block tweet">
+            <ul id="content-widget-3">
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!----------tweet 4------------>
+      
+      <div class="span3">
+        <div class="content">
+          <div class="title tweet-title">
+            <h2></h2>
+            <div class="btn-group tweet-menu">
+              <!-- <button class="btn"><div id="default4" class="keyword-span"></div></button>
+              <button class="btn dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span></button>
+              <ul class="dropdown-menu keywords" id="widget-dropdown-keyword-4">
+              </ul> -->
+              <select data-placeholder="Choose a keyword..." class="chosen-select keywords-select" 
+                id="widget-keyword-4">
+                
+              </select>
+            </div>
+          </div>
+          <div id="content_4" class="scroll-block tweet">
+            <ul id="content-widget-4">
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="container">
+    <div class="row"> 
+      
+      <!----------map------------>
+      
+      <div class="span6">
+        <div class="content">
+          <div class="title">
+            <h2>Sentiments Heat Map</h2>
+	    <div class="dropmenu pull-right">
+	       <div class="btn-group" style="padding-top:7px;">
+		<!-- <button class="btn"><span id="map-keywords-label">All keywords</span></button>
+		<button class="btn dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span> </button>
+		<ul class="dropdown-menu keywords" id="map-keywords">
+		</ul> -->
+	       <select data-placeholder="All keywords" class="chosen-select keywords-select" 
+		 id="map-keywords">
+		
+	       </select>
+	       </div>
+	     </div>
+          </div>
+          <% /* <div class="map"><img src="img/map.jpg" alt="" /></div> */ %>
+          <div class="map">
+            <div id="maps" class="map1">            
+              <div id="country"></div>                                                            
+              <div id="overlay" width="922" height="666" style="position:absolute;"></div>
+              <canvas id="hmap" width="922" height="666" style="position:absolute;"></canvas>       
+              <canvas id="b" class="" width="922" height="666" style=""></canvas>       
+              <canvas id="d" width="922" height="666" style=""></canvas>
+              <canvas id="red" width="922" height="666" style="position:absolute;"></canvas>
+              <canvas id="yellow" width="922" height="666" style="position:absolute;"></canvas>
+              <canvas id="green" width="922" height="666" style="position:absolute;"></canvas>             
+            </div>
+          <div class="clear"></div> 
+
+          </div>
+        </div>
+      </div>
+      <div class="span6">
+        <div class="content content-margin">
+          <div class="title">
+            <h2>Sentiment trends</h2>
+            <div class="dropmenu pull-right">
+              <div class="btn-group" style="padding-top:7px;">
+                <!-- <button class="btn"><span id="sentiments-keywords-label">All keywords</span></button>
+                <button class="btn dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span> </button>
+                <ul class="dropdown-menu keywords" id="sentiments-keywords">
+                </ul> -->
+              <select data-placeholder="All keywords" class="chosen-select keywords-select" 
+                id="sentiments-keywords">
+                
+              </select>
+              </div>
+            </div>
+          </div>
+          <div class="graph">
+            <div id="sentiments-widget" style="min-width: 200px; height: 150px; margin: 0 auto"></div>
+          </div>
+        </div>
+        <div class="content" id="influencer-maindashboard">
+          <div class="title">
+            <a href="/influencers" target="_blank"><h2>Influencers</h2></a>
+            <div class="dropmenu pull-right">
+              <div class="btn-group" style="padding-top:7px;">
+                <select data-placeholder="Choose a keyword..."
+                  class="chosen-select keywords-select" id="influencers-keyword">
+                </select>
+              </div>
+            </div>
+          </div>
+          <ul class="infl-list" id="influencers-list">           
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>

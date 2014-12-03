@@ -1,0 +1,111 @@
+body {
+	/*font-family: Georgia, sans-serif;*/
+}
+body.sat {
+	
+}
+
+#wrapper {
+	margin:0 auto;
+	width:922px;
+	height:515px;
+	position:relative;	
+}
+.hwaccel {
+	-webkit-transform: rotate3d(0,0,1, 0deg);
+	-moz-transform: rotate3d(0,0,1,0deg);
+	transform: rotate3d(0,0,1, 0deg);
+	
+/*-webkit-transform: translateZ(0); 
+	-moz-transform: translate(0);
+	*/
+}
+.clear {
+	clear:both;
+}
+
+
+#maps {
+	/*border-bottom:1px solid #aaa;*/
+	/*border-bottom:2px solid #000;*/
+	width:922px;
+	height:515px;/*570px;666px;*/
+	background:transparent url(/img/world_map_5467_1_2.jpg);
+	background-size:922px 564px;
+	overflow:hidden;
+	position:relative;
+}
+
+#red {
+	background:transparent url();
+	margin: 0 auto;
+    position: absolute;
+    z-index: 1000;
+}
+
+#green {
+	background:transparent url();
+	margin: 0 auto;
+    position: absolute;
+    z-index: 1000;
+}
+
+#yellow {
+	background:transparent url();
+	margin: 0 auto;
+    position: absolute;
+    z-index: 1000;
+}
+#maps div.loading{
+	position:absolute;
+	left:0;
+	bottom:0;
+	height:30px;
+	font-family:'CABNDWebBold';
+	color:#999;
+}
+
+#d {
+	margin:0 auto;
+	position:absolute;
+	z-index:1000;
+}
+#b {
+	margin:0 auto;
+	position:absolute;
+	z-index:1001;
+	background-color:transparent;
+	display:none;
+}
+#s {
+	margin:0 auto;
+	position:absolute;
+	z-index:1002;
+	background-color:transparent;
+}
+
+#hmap {
+	margin:0 auto;
+	position:absolute;
+	background:transparent;
+	z-index:999;
+}
+
+#maps #overlay {
+	background:transparent;
+	filter:alpha(opacity=75);
+	opacity: 0.75;
+	-moz-opacity:0.75;
+	width:922px;
+	height:515px;
+	margin:0 auto;
+	position:absolute;
+	z-index:5;
+	display:none;
+}
+.smooth_zoom_preloader {
+	background-image: url(../zoom_assets/preloader.gif);
+}	
+.smooth_zoom_icons {
+	background-image: url(../zoom_assets/icons.png);
+}

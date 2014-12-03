@@ -1,0 +1,54 @@
+<% scripts.push('/js/admin.js') %>
+<% scripts.push('/js/crypto.js') %>
+<% styles.push('/css/admin.css') %>
+<script><%- javascript %></script>
+<div class="container admin">
+	<div class="row">
+		<!----------Users------------>
+		
+		<div class="span3">
+			<div class="content">
+				<div class="title users-head">
+					<h2 class="tab">Users</h2>
+					<button class="btn add">Add</button>
+				</div>
+				<div id="users_content" class="admin-users-scroll-block list-wrapper admin-scroll-bar">
+				</div>
+			</div>
+		</div>
+		
+		<!----------Keywords------------>
+		
+		<div class="span3">
+			<div class="content">
+				<div class="title keywords-head">
+					<h2 class="tab">Keywords</h2>
+					<button class="btn add">Add</button>
+				</div>
+				<div id="keywords_content" class="admin-keywords-scroll-block list-wrapper admin-scroll-bar">
+				</div>
+			</div>
+		</div>
+		
+		<!----------Alert Rules------------>
+		
+		<div class="span3">
+			<div class="content">
+				<div class="title alert-rules-head">
+					<h2 class="tab">Alert Rules</h2>
+					<button class="btn add">Add</button>
+				</div>
+				<div id="alert_rules_content" class="admin-alert-rules-scroll-block list-wrapper admin-scroll-bar">
+				</div>
+			</div>
+		</div>
+		
+		<!--------------Edit------------>
+	</div>
+	<div class="row">
+		<div class="span6">
+			<div id="detail_view" class="content">
+			</div>
+		</div>
+	</div>
+</div>
